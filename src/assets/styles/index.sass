@@ -1,0 +1,191 @@
+
+// -----------------------------
+// Variables
+// -----------------------------
+
+$color: #ecf0f1
+$lightColor: #efefef
+$darkColor: #333
+
+// -----------------------------
+// Global Styles
+// -----------------------------
+*
+  box-sizing: border-box
+
+body
+  padding: 0
+  margin: 0
+  font-size: 14px
+  font-family: sans-serif
+  color: $color
+  background: url('../images/grey_wash_wall.png')
+
+a
+  text-decoration: none
+  display: inline-block
+  color: $color
+
+// -----------------------------
+// App Specific
+// -----------------------------
+
+.header, .main, .footer
+  width: 1080px
+  display: block
+  margin: 0 auto
+
+// -----------------------------
+// Header
+// -----------------------------
+
+.header
+  padding: 10px
+  border-bottom: 1px solid $lightColor
+
+// -----------------------------
+// Navigation
+// -----------------------------
+
+.nav
+  display: block
+  text-align: center
+  padding: 0
+
+  li
+    margin: 0
+    padding: 0
+    display: inline-block
+    list-style: none
+
+    a
+      padding: 5px 10px
+      font-size: 20px
+
+    a:hover
+      font-weight: bold
+// -----------------------------
+// Main
+// -----------------------------
+
+.main
+  padding: 10px
+  border-bottom: 1px solid $lightColor
+
+// -----------------------------
+// Home
+// -----------------------------
+
+.home
+
+  .home_containter
+    width:100%
+    height: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: rgba(44,62,80,0.8)
+    border-radius:5px
+
+    #home_tv
+      display: block
+      height: 300px
+      width:1680px
+      padding:0
+
+      li
+        display:inline-block
+        margin: 0 10px
+        padding:5px
+        width:316px;
+        border: 1px solid $color
+        border-radius:5px
+        vertical-align: top
+
+    #home_movies
+      display: block
+      height: 500px
+      width:1360px
+      padding:0
+
+      li
+        display:inline-block
+        margin: 0 10px
+        padding:5px
+        width:252px
+        border: 1px solid $color
+        border-radius:5px
+        vertical-align: top
+
+// -----------------------------
+// tv
+// -----------------------------
+
+.tv
+
+  .containter
+    width:100%
+    height: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: rgba(44,62,80,0.8)
+    border-radius:5px
+
+    #tv
+      display: block
+      width:98%
+      margin: 20px auto
+      padding:0
+
+      li
+        display:inline-block
+        margin: 0 15px 20px
+        padding:5px
+        width:316px;
+        border: 1px solid $color
+        border-radius:5px
+        vertical-align: top
+
+// -----------------------------
+// movies
+// -----------------------------
+
+.movies
+
+  .containter
+    width:100%
+    height: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: rgba(44,62,80,0.8)
+    border-radius:5px
+
+    #movies
+      display: block
+      width:98%
+      margin: 20px auto
+      padding:0
+
+      li
+        display:inline-block
+        margin: 0 45px 20px
+        padding:5px
+        width:252px
+        border: 1px solid $color
+        border-radius:5px
+        vertical-align: top
+
+        img
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+.footer
+  padding: 10px
+
+  p
+    margin: 0
+    padding: 0
+    font-size: 12px
+

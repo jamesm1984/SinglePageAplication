@@ -1,0 +1,149 @@
+/* line 7, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+* {
+  box-sizing: border-box; }
+
+/* line 10, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #ecf0f1;
+  background: url('../images/grey_wash_wall.png'); }
+
+/* line 18, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: #ecf0f1; }
+
+/* line 24, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.header, .main, .footer {
+  width: 1080px;
+  display: block;
+  margin: 0 auto; }
+
+/* line 30, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.header {
+  padding: 10px;
+  border-bottom: 1px solid #efefef; }
+
+/* line 35, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.nav {
+  display: block;
+  text-align: center;
+  padding: 0; }
+  /* line 40, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .nav li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    list-style: none; }
+    /* line 46, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .nav li a {
+      padding: 5px 10px;
+      font-size: 20px; }
+    /* line 50, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .nav li a:hover {
+      font-weight: bold; }
+
+/* line 53, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.main {
+  padding: 10px;
+  border-bottom: 1px solid #efefef; }
+
+/* line 60, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.home .home_containter {
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: rgba(44, 62, 80, 0.8);
+  border-radius: 5px; }
+  /* line 68, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .home .home_containter #home_tv {
+    display: block;
+    height: 300px;
+    width: 1680px;
+    padding: 0; }
+    /* line 74, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .home .home_containter #home_tv li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 5px;
+      width: 316px;
+      border: 1px solid #ecf0f1;
+      border-radius: 5px;
+      vertical-align: top; }
+  /* line 83, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .home .home_containter #home_movies {
+    display: block;
+    height: 500px;
+    width: 1360px;
+    padding: 0; }
+    /* line 89, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .home .home_containter #home_movies li {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 5px;
+      width: 252px;
+      border: 1px solid #ecf0f1;
+      border-radius: 5px;
+      vertical-align: top; }
+
+/* line 101, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.tv .containter {
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: rgba(44, 62, 80, 0.8);
+  border-radius: 5px; }
+  /* line 109, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .tv .containter #tv {
+    display: block;
+    width: 98%;
+    margin: 20px auto;
+    padding: 0; }
+    /* line 115, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .tv .containter #tv li {
+      display: inline-block;
+      margin: 0 15px 20px;
+      padding: 5px;
+      width: 316px;
+      border: 1px solid #ecf0f1;
+      border-radius: 5px;
+      vertical-align: top; }
+
+/* line 127, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.movies .containter {
+  width: 100%;
+  height: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: rgba(44, 62, 80, 0.8);
+  border-radius: 5px; }
+  /* line 135, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .movies .containter #movies {
+    display: block;
+    width: 98%;
+    margin: 20px auto;
+    padding: 0; }
+    /* line 141, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+    .movies .containter #movies li {
+      display: inline-block;
+      margin: 0 45px 20px;
+      padding: 5px;
+      width: 252px;
+      border: 1px solid #ecf0f1;
+      border-radius: 5px;
+      vertical-align: top; }
+
+/* line 154, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+.footer {
+  padding: 10px; }
+  /* line 157, /Users/artur/Desktop/spa-boilerplate/src/assets/styles/index.sass */
+  .footer p {
+    margin: 0;
+    padding: 0;
+    font-size: 12px; }
