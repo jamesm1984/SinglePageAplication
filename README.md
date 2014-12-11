@@ -17,7 +17,11 @@
 
 Node.js
 
-- I used Node to provide interaction between users. Giving users dynamic updated content when other users make changes. 
+- I used Node to provide dynamic updated content. 
+
+Backbone.js
+
+- I used Node to provide the structure of the one page appliction. 
 
 
 jQuery
