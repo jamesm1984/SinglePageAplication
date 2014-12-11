@@ -1,8 +1,6 @@
 // Keys
-// - best buy: um8mu6rt8v6jfamdsc25wpbz
 // - Rotten Tomato: btgk4cag7u4vnv52szrrbms5
-// - guidebox: rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW
-// -
+
 
 // -----------------------------
 // Wait for DOM Load
@@ -40,9 +38,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#theater').append(html);
@@ -59,9 +57,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#dvd').append(html);
@@ -84,9 +82,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#theater').append(html);
@@ -109,9 +107,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#movies').append(html);
@@ -124,7 +122,6 @@ jQuery(function($) {
 
     // Coming soon Route
     coming: function() {
-      console.log('Navigating to About Page');
 
       $.ajax({
           url: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=btgk4cag7u4vnv52szrrbms5&page_limit=9&country=ca",
@@ -135,9 +132,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#theater').append(html);
@@ -154,9 +151,9 @@ jQuery(function($) {
               var data= RottenData.movies[i];
 
               if ( data.synopsis != ''){data
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr><h2>Synopsis</h2><p class='synopsis'>"+data.synopsis+"</p></li>"
               } else {
-                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h3>Scores</h3><hr><p class='score'>Audience: <span>"+data.ratings.audience_score+"%</span></p><p class='score'>Critics: <span>"+data.ratings.critics_score+"%</span></p><hr></li>"
               }
 
               $('#dvd').append(html);

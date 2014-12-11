@@ -77,29 +77,44 @@ a {
       vertical-align: top;
       background-color: rgba(0, 0, 0, 0.5); }
       /* line 83, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .home .containter #theater li h2, .home .containter #dvd li h2 {
+        margin: 5px; }
+      /* line 85, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .home .containter #theater li img, .home .containter #dvd li img {
         height: 100px;
         display: inline-block;
         float: left;
-        margin: 0 0 10px 10%;
+        margin: 0 10px 10px 10%;
         overflow: hidden; }
-      /* line 89, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 91, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .home .containter #theater li div, .home .containter #dvd li div {
-        width: 60%;
+        width: 55%;
         display: inline-block;
         float: left;
         margin-top: -10px;
         overflow: hidden; }
-      /* line 95, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .home .containter #theater li h2, .home .containter #dvd li h2 {
-        clear: both; }
-      /* line 97, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .home .containter #theater li p, .home .containter #dvd li p {
+      /* line 98, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .home .containter #theater li h3, .home .containter #dvd li h3 {
+        clear: both;
+        margin: 0;
+        margin-top: 5px; }
+      /* line 103, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .home .containter #theater li .score, .home .containter #dvd li .score {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        font-size: 16px; }
+        /* line 109, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+        .home .containter #theater li .score span, .home .containter #dvd li .score span {
+          color: #f1c40f;
+          letter-spacing: 1.5px; }
+      /* line 113, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .home .containter #theater li .synopsis, .home .containter #dvd li .synopsis {
         max-height: 75px;
-        padding: 0 10px;
+        padding: 0 15px;
         overflow: auto; }
 
-/* line 105, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 121, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .theater .containter {
   width: 100%;
   height: auto;
@@ -107,13 +122,13 @@ a {
   overflow-y: hidden;
   background-color: rgba(44, 62, 80, 0.8);
   border-radius: 5px; }
-  /* line 113, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 129, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .theater .containter #theater {
     display: block;
     width: 98%;
     margin: 20px auto;
     padding: 0; }
-    /* line 119, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+    /* line 135, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
     .theater .containter #theater li {
       display: inline-block;
       margin: 0 45px 20px;
@@ -123,33 +138,45 @@ a {
       border-radius: 5px;
       vertical-align: top;
       background-color: rgba(0, 0, 0, 0.5); }
-      /* line 128, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 144, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .theater .containter #theater li h2 {
-        font-size: 20px; }
-      /* line 130, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+        margin: 5px; }
+      /* line 146, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .theater .containter #theater li img {
         height: 100px;
         display: inline-block;
         float: left;
-        margin: 0 0 10px 10%;
+        margin: 0 10px 10px 10%;
         overflow: hidden; }
-      /* line 136, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 152, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .theater .containter #theater li div {
-        width: 60%;
+        width: 55%;
         display: inline-block;
         float: left;
         margin-top: -10px;
         overflow: hidden; }
-      /* line 142, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .theater .containter #theater li h2 {
-        clear: both; }
-      /* line 144, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .theater .containter #theater li p {
+      /* line 159, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .theater .containter #theater li h3 {
+        clear: both;
+        margin: 0;
+        margin-top: 5px; }
+      /* line 164, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .theater .containter #theater li .score {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        font-size: 16px; }
+        /* line 170, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+        .theater .containter #theater li .score span {
+          color: #f1c40f;
+          letter-spacing: 1.5px; }
+      /* line 174, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .theater .containter #theater li .synopsis {
         max-height: 75px;
-        padding: 0 10px;
+        padding: 0 15px;
         overflow: auto; }
 
-/* line 152, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 182, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .movies .containter {
   width: 100%;
   height: auto;
@@ -157,13 +184,13 @@ a {
   overflow-y: hidden;
   background-color: rgba(44, 62, 80, 0.8);
   border-radius: 5px; }
-  /* line 160, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 190, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .movies .containter #movies {
     display: block;
     width: 98%;
     margin: 20px auto;
     padding: 0; }
-    /* line 166, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+    /* line 196, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
     .movies .containter #movies li {
       display: inline-block;
       margin: 0 45px 20px;
@@ -173,30 +200,45 @@ a {
       border-radius: 5px;
       vertical-align: top;
       background-color: rgba(0, 0, 0, 0.5); }
-      /* line 175, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 205, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .movies .containter #movies li h2 {
+        margin: 5px; }
+      /* line 207, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .movies .containter #movies li img {
         height: 100px;
         display: inline-block;
         float: left;
-        margin: 0 0 10px 10%;
+        margin: 0 10px 10px 10%;
         overflow: hidden; }
-      /* line 181, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 213, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .movies .containter #movies li div {
-        width: 60%;
+        width: 55%;
         display: inline-block;
         float: left;
         margin-top: -10px;
         overflow: hidden; }
-      /* line 187, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .movies .containter #movies li h2 {
-        clear: both; }
-      /* line 189, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .movies .containter #movies li p {
+      /* line 220, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .movies .containter #movies li h3 {
+        clear: both;
+        margin: 0;
+        margin-top: 5px; }
+      /* line 225, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .movies .containter #movies li .score {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        font-size: 16px; }
+        /* line 231, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+        .movies .containter #movies li .score span {
+          color: #f1c40f;
+          letter-spacing: 1.5px; }
+      /* line 235, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .movies .containter #movies li .synopsis {
         max-height: 75px;
-        padding: 0 10px;
+        padding: 0 15px;
         overflow: auto; }
 
-/* line 195, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 241, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .coming .containter {
   width: 100%;
   height: auto;
@@ -204,13 +246,13 @@ a {
   overflow-y: hidden;
   background-color: rgba(44, 62, 80, 0.8);
   border-radius: 5px; }
-  /* line 203, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 249, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .coming .containter #theater, .coming .containter #dvd {
     display: block;
     width: 98%;
     margin: 20px auto;
     padding: 0; }
-    /* line 209, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+    /* line 255, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
     .coming .containter #theater li, .coming .containter #dvd li {
       display: inline-block;
       margin: 0 45px 20px;
@@ -220,30 +262,45 @@ a {
       border-radius: 5px;
       vertical-align: top;
       background-color: rgba(0, 0, 0, 0.5); }
-      /* line 218, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 264, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .coming .containter #theater li h2, .coming .containter #dvd li h2 {
+        margin: 5px; }
+      /* line 266, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .coming .containter #theater li img, .coming .containter #dvd li img {
         height: 100px;
         display: inline-block;
         float: left;
-        margin: 0 0 10px 10%;
+        margin: 0 10px 10px 10%;
         overflow: hidden; }
-      /* line 224, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      /* line 272, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
       .coming .containter #theater li div, .coming .containter #dvd li div {
-        width: 60%;
+        width: 55%;
         display: inline-block;
         float: left;
         margin-top: -10px;
         overflow: hidden; }
-      /* line 230, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .coming .containter #theater li h2, .coming .containter #dvd li h2 {
-        clear: both; }
-      /* line 232, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-      .coming .containter #theater li p, .coming .containter #dvd li p {
+      /* line 279, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .coming .containter #theater li h3, .coming .containter #dvd li h3 {
+        clear: both;
+        margin: 0;
+        margin-top: 5px; }
+      /* line 284, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .coming .containter #theater li .score, .coming .containter #dvd li .score {
+        display: inline-block;
+        margin-left: 15px;
+        margin-bottom: 10px;
+        font-size: 16px; }
+        /* line 290, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+        .coming .containter #theater li .score span, .coming .containter #dvd li .score span {
+          color: #f1c40f;
+          letter-spacing: 1.5px; }
+      /* line 294, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+      .coming .containter #theater li .synopsis, .coming .containter #dvd li .synopsis {
         max-height: 75px;
-        padding: 0 10px;
+        padding: 0 15px;
         overflow: auto; }
 
-/* line 238, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 300, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .contact .containter {
   width: 100%;
   height: auto;
@@ -252,10 +309,10 @@ a {
   background-color: rgba(44, 62, 80, 0.8);
   border-radius: 5px; }
 
-/* line 247, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 309, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .footer {
   padding: 10px; }
-  /* line 250, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 312, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .footer p {
     margin: 0;
     padding: 0;
