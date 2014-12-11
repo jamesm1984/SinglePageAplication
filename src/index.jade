@@ -7,7 +7,7 @@ html
 
   meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
-  title James's movie and tv finder
+  title James's movie finder
 
   meta(name="description", content="Hello World")
 
@@ -25,17 +25,17 @@ html
 
     header.header
 
-      h1 James's movie and tv finder
+      h1 James's movie finder
 
       ul.nav
 
         li: a(href="/") Home
 
-        li: a(href="/tv") TV
+        li: a(href="/theater") Theater
 
-        li: a(href="/movies") Movies
+        li: a(href="/movies") Popular on DVD
 
-        li: a(href="/about") About
+        li: a(href="/coming") Coming soon
 
         li: a(href="/contact") Contact
 
@@ -51,23 +51,23 @@ html
 
   script#home(type="text/template").
     <div class="page home">
-      {{{tv_header}}}
-      <div class="home_containter">
-        <ul id="home_tv">
+      {{{theater_header}}}
+      <div class="containter">
+        <ul id="theater">
         </ul>
       </div>
-      {{{movie_header}}}
-      <div class="home_containter">
-        <ul id="home_movies">
+      {{{dvd_header}}}
+      <div class="containter">
+        <ul id="dvd">
         </ul>
       </div>
     </div>
 
-  script#tv(type="text/template").
-    <div class="page tv">
+  script#theater(type="text/template").
+    <div class="page theater">
       {{{page_header}}}
       <div class="containter">
-        <ul id="tv">
+        <ul id="theater">
         </ul>
       </div>
     </div>
@@ -81,14 +81,26 @@ html
       </div>
     </div>
 
-  script#about(type="text/template").
-    <div class="page about">
-      {{{page_header}}}
+  script#coming(type="text/template").
+    <div class="page coming">
+      {{{theaters_header}}}
+      <div class="containter">
+        <ul id="theater">
+        </ul>
+      </div>
+      {{{dvd_header}}}
+      <div class="containter">
+        <ul id="dvd">
+        </ul>
+      </div>
     </div>
 
   script#contact(type="text/template").
     <div class="page contact">
       {{{page_header}}}
+      <div class="containter">
+        <p>Where all things movies reside.</p>
+      </div>
     </div>
 
   // -----------------------------

@@ -78,7 +78,7 @@ a
 
 .home
 
-  .home_containter
+  .containter
     width:100%
     height: auto
     overflow-x: scroll
@@ -86,41 +86,45 @@ a
     background-color: rgba(44,62,80,0.8)
     border-radius:5px
 
-    #home_tv
+    #theater, #dvd
       display: block
-      height: 300px
-      width:1680px
+      width:98%
+      margin: 20px auto
       padding:0
 
       li
         display:inline-block
-        margin: 0 10px
-        padding:5px
-        width:316px;
-        border: 1px solid $color
-        border-radius:5px
-        vertical-align: top
-
-    #home_movies
-      display: block
-      height: 500px
-      width:1360px
-      padding:0
-
-      li
-        display:inline-block
-        margin: 0 10px
+        margin: 0 45px 20px
         padding:5px
         width:252px
         border: 1px solid $color
         border-radius:5px
         vertical-align: top
+        background-color:rgba(0,0,0,.5)
+        img
+          height:100px
+          display:inline-block
+          float: left
+          margin: 0 0 10px 10%
+          overflow: hidden
+        div
+          width:60%
+          display:inline-block
+          float: left
+          margin-top: -10px
+          overflow: hidden
+        h2
+          clear:both
+        p
+          max-height: 75px
+          padding: 0 10px
+          overflow: auto
 
 // -----------------------------
-// tv
+// theater
 // -----------------------------
 
-.tv
+.theater
 
   .containter
     width:100%
@@ -130,7 +134,7 @@ a
     background-color: rgba(44,62,80,0.8)
     border-radius:5px
 
-    #tv
+    #theater
       display: block
       width:98%
       margin: 20px auto
@@ -138,12 +142,33 @@ a
 
       li
         display:inline-block
-        margin: 0 15px 20px
+        margin: 0 45px 20px
         padding:5px
-        width:316px;
+        width:252px
         border: 1px solid $color
         border-radius:5px
         vertical-align: top
+        background-color:rgba(0,0,0,.5)
+        h2
+          font-size: 20px
+        img
+          height:100px
+          display:inline-block
+          float: left
+          margin: 0 0 10px 10%
+          overflow: hidden
+        div
+          width:60%
+          display:inline-block
+          float: left
+          margin-top: -10px
+          overflow: hidden
+        h2
+          clear:both
+        p
+          max-height: 75px
+          padding: 0 10px
+          overflow: auto
 
 // -----------------------------
 // movies
@@ -173,28 +198,83 @@ a
         border: 1px solid $color
         border-radius:5px
         vertical-align: top
+        background-color:rgba(0,0,0,.5)
         img
           height:100px
           display:inline-block
           float: left
-          margin-bottom:10px
+          margin: 0 0 10px 10%
           overflow: hidden
         div
-          width:70%
+          width:60%
           display:inline-block
           float: left
           margin-top: -10px
-          padding-left:5%
           overflow: hidden
         h2
           clear:both
         p
           max-height: 75px
+          padding: 0 10px
           overflow: auto
+// -----------------------------
+// coming soon
+// -----------------------------
+.coming
 
+  .containter
+    width:100%
+    height: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: rgba(44,62,80,0.8)
+    border-radius:5px
 
+    #theater, #dvd
+      display: block
+      width:98%
+      margin: 20px auto
+      padding:0
 
+      li
+        display:inline-block
+        margin: 0 45px 20px
+        padding:5px
+        width:252px
+        border: 1px solid $color
+        border-radius:5px
+        vertical-align: top
+        background-color:rgba(0,0,0,.5)
+        img
+          height:100px
+          display:inline-block
+          float: left
+          margin: 0 0 10px 10%
+          overflow: hidden
+        div
+          width:60%
+          display:inline-block
+          float: left
+          margin-top: -10px
+          overflow: hidden
+        h2
+          clear:both
+        p
+          max-height: 75px
+          padding: 0 10px
+          overflow: auto
+// -----------------------------
+// contact
+// -----------------------------
+.contact
 
+  .containter
+    width:100%
+    height: auto
+    overflow-x: scroll
+    overflow-y: hidden
+    background-color: rgba(44,62,80,0.8)
+    border-radius:5px
 
 // -----------------------------
 // Footer

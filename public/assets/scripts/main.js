@@ -10,10 +10,7 @@
 
 
 jQuery(function($) {
-var seasons_data = [];//tv = JSON.parse('http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/1/5/subscription/web');
-var id;
-var queryData;
-  //movies = JSON.parse('http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/1/5/subscription/web');
+  var id;
 
   // -----------------------------
   // Router
@@ -24,9 +21,9 @@ var queryData;
     // Our Routes
     routes: {
       '' : 'home',
-      'tv' : 'tv',
+      'theater' : 'theater',
       'movies' : 'movies',
-      'about': 'about',
+      'coming': 'coming',
       'contact': 'contact'
     },
 
@@ -34,169 +31,140 @@ var queryData;
     home: function() {
       console.log('Navigating to Home Page');
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/0/5/subscription/web",
-        function( data ) {
-          for (i=0; i < data['results'].length; i++){
-            var id = data['results'][i].id;
-            var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].first_aired+"</p><img src="+data['results'][i].artwork_304x171+"></li>";
-            $('#home_tv').append(html);
-          }
-        }
-      );
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/opening.json?apikey=btgk4cag7u4vnv52szrrbms5&limit=6&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/0/5/subscription/web",
-        function( data ) {
-          for (i=0; i < data['results'].length; i++){
-            var id = data['results'][i].id;
-            var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].release_year+"</p><img src="+data['results'][i].poster_240x342+"></li>";
-            $('#home_movies').append(html);
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+              }
+
+              $('#theater').append(html);
+            };
           }
-        }
-      );
+        });
+
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=btgk4cag7u4vnv52szrrbms5&page_limit=6&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
+
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+              }
+
+              $('#dvd').append(html);
+            };
+          }
+        });
 
       App.views['home'].render();
     },
 
-    // Tv Route
-    tv: function() {
-      // http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/show/ {id} /seasons
+    // theater Route
+    theater: function() {
 
-      console.log('Navigating to tv Page');
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/in_theaters.json?apikey=btgk4cag7u4vnv52szrrbms5&page_limit=50&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/0/27/subscription/web",
-        function( data ) {
-          for (i=0; i < 27; i++){
-            id.push(data['results'][i].id)
-            var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].first_aired+"</p><img src="+data['results'][i].artwork_304x171+"></li>";
-            $('#tv').append(html);
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+              }
+
+              $('#theater').append(html);
+            };
           }
-        }
-      )
+        });
 
-      App.views['tv'].render();
+      App.views['theater'].render();
     },
 
     // Movies Route
     movies: function() {
-      // var id=[];
-      // var loopNumber;
-      // var poster =[];
 
-      // {Base API URL} /movie/ {id}
-      console.log('Navigating to movies Page');
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=btgk4cag7u4vnv52szrrbms5&limit=27&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
 
-      // $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/0/27/purchase/web",
-
-      //   function( data ) {
-
-      //     // function loadRottenData(id, poster){
-
-      //     //   $.ajax({
-      //     //     url: "http://api.rottentomatoes.com/api/public/v1.0/movies/"+id+".json?apikey=btgk4cag7u4vnv52szrrbms5",
-      //     //     dataType: "jsonp",
-      //     //     success: function(RottenData){
-      //     //       console.log(RottenData);
-      //     //       console.log(poster)
-
-      //     //       if ( RottenData.synopsis != ''){
-      //     //         var html =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img src="+poster+"><h2>Synopsis</h2><p>"+RottenData.synopsis+"</p></li>"
-      //     //       } else {
-      //     //         var html =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img src="+poster+"></li>"
-      //     //       }
-
-      //     //       $('#movies').append(html);
-      //     //     }
-      //     //   });
-
-      //     // }
-      //     for (i=0; i < 27; i++){
-      //       poster.push(data['results'][i].poster_240x342);
-
-      //     }
-      //     for (i=0; i < 27; i++){
-      //       loopNumber = i;
-      //       // queryData = data;
-      //       // var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].release_year+"</p><img src="+data['results'][i].poster_240x342+"></li>";
-      //       // $('#movies').append(html);
-      //       var posterId = "posterId-"+i;
-
-      //       $.ajax({
-      //         url: "http://api.rottentomatoes.com/api/public/v1.0/movies/"+data['results'][i].rottentomatoes+".json?apikey=btgk4cag7u4vnv52szrrbms5",
-      //         dataType: "jsonp",
-      //         success: function(RottenData){
-      //           // console.log(RottenData);
-      //           // console.log(poster);
-      //           var html1 =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img id='"+posterId+"'></li>";
-      //           var html2 =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img id='"+posterId+"'><h2>Synopsis</h2><p>"+RottenData.synopsis+"</p></li>";
-
-      //           if ( RottenData.synopsis != ''){
-      //             var html = html1;
-      //           } else {
-      //             var html = html2;
-      //           }
-
-      //           $('#movies').append(html);
-      //         }
-      //       });
-
-      //       // loadRottenData(data['results'][i].rottentomatoes, data['results'][i].poster_240x342);
-
-      //     }
-
-          //  working - poster sucks
-          $.ajax({
-              url: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=btgk4cag7u4vnv52szrrbms5&limit=27&country=ca",
-              dataType: "jsonp",
-              success: function(RottenData){
-                console.log(RottenData.movies);
-                for (i=0; i < 27; i++){
-                  var data= RottenData.movies[i];
-                  // console.log(RottenData);
-
-                  if ( data.synopsis != ''){data
-                    var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
-                  } else {
-                    var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
-                  }
-
-                  $('#movies').append(html);
-                };
-
-
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
               }
-            });
 
-
-      //   }
-      // );
+              $('#movies').append(html);
+            };
+          }
+        });
 
       App.views['movies'].render();
     },
 
-    // About Route
-    about: function() {
+    // Coming soon Route
+    coming: function() {
       console.log('Navigating to About Page');
-      var time;
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/updates/get_current_time",
-        function( data ) {
-          console.log(data['results'])
-          // time = data.results
-          $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/updates/movies/changes/"+data['results'],
-            function( newData ) {
-              console.log(newData)
-            }
-          )
-        }
-      );
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/movies/upcoming.json?apikey=btgk4cag7u4vnv52szrrbms5&page_limit=9&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/sources/subscription",
-        function( data ) {
-          console.log(data)
-        }
-      );
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+              }
 
-      App.views['about'].render();
+              $('#theater').append(html);
+            };
+          }
+        });
+
+      $.ajax({
+          url: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/upcoming.json?apikey=btgk4cag7u4vnv52szrrbms5&page_limit=9&country=ca",
+          dataType: "jsonp",
+          success: function(RottenData){
+            console.log(RottenData.movies);
+            for (i=0; i < 27; i++){
+              var data= RottenData.movies[i];
+
+              if ( data.synopsis != ''){data
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+              } else {
+                var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+              }
+
+              $('#dvd').append(html);
+            };
+          }
+        });
+
+      App.views['coming'].render();
     },
 
     // Contact Route
@@ -219,9 +187,9 @@ var queryData;
     // Setup views
     this.views = {
       home: new HomeView(),
-      tv: new TvView(),
+      theater: new theaterView(),
       movies: new MoviesView(),
-      about: new AboutView(),
+      coming: new comingView(),
       contact: new ContactView()
     };
 
@@ -248,10 +216,9 @@ var queryData;
 
       // Some page data
       this.model.set({
-        page_header: "<h1>Welcome to James's movie and tv finder</h1>",
-        about:"<p>James's movie and tv finder helps you find popular movies and tv shows for sale and links where it is viewable online.</p>",
-        tv_header: "<h1>Popular Tv Shows</h1>",
-        movie_header: "<h1>Popular Movies Shows</h1>"
+        page_header: "<h1>Welcome to James's movie finder</h1>",
+        theater_header: "<h1>New to theater</h1>",
+        dvd_header: "<h1>New to dvd</h1>"
       });
 
     },
@@ -270,16 +237,16 @@ var queryData;
   });
 
   // -----------------------------
-  // Tv View
+  // Theater View
   // -----------------------------
 
-  var TvView = Backbone.View.extend({
+  var theaterView = Backbone.View.extend({
 
     // Our Container Element
     el: $('.main'),
 
     // Our template ID
-    template: '#tv',
+    template: '#theater',
 
     // Initialize View
     initialize: function() {
@@ -290,7 +257,7 @@ var queryData;
 
       // Some page data
       this.model.set({
-        page_header: '<h1>Tv Shows</h1>'
+        page_header: '<h1>Movies in theater</h1>'
       });
 
     },
@@ -309,7 +276,7 @@ var queryData;
   });
 
   // -----------------------------
-  // Movies View
+  // Movies on dvd View
   // -----------------------------
 
   var MoviesView = Backbone.View.extend({
@@ -329,7 +296,7 @@ var queryData;
 
       // Some page data
       this.model.set({
-        page_header: '<h1>Movies</h1>'
+        page_header: '<h1>Popular on DVD</h1>'
       });
 
     },
@@ -348,16 +315,16 @@ var queryData;
   });
 
   // -----------------------------
-  // About View
+  // Coming soon View
   // -----------------------------
 
-  var AboutView = Backbone.View.extend({
+  var comingView = Backbone.View.extend({
 
     // Our Container Element
     el: $('.main'),
 
     // Our template ID
-    template: '#about',
+    template: '#coming',
 
     // Initialize View
     initialize: function() {
@@ -368,7 +335,8 @@ var queryData;
 
       // Some page data
       this.model.set({
-        page_header: '<h1>About</h1>'
+        theaters_header: '<h1>Coming Soon to Theaters</h1>',
+        dvd_header: '<h1>Coming Soon to dvd</h1>'
       });
 
     },

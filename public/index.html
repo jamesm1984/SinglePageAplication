@@ -3,7 +3,7 @@
   <head></head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>James's movie and tv finder</title>
+  <title>James's movie finder</title>
   <meta name="description" content="Hello World">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
   <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
@@ -15,12 +15,12 @@
   <body></body>
   <div class="wrapper">
     <header class="header">
-      <h1>James's movie and tv finder</h1>
+      <h1>James's movie finder</h1>
       <ul class="nav">
         <li><a href="/">Home</a></li>
-        <li><a href="/tv">TV</a></li>
-        <li><a href="/movies">Movies</a></li>
-        <li><a href="/about">About</a></li>
+        <li><a href="/theater">Theater</a></li>
+        <li><a href="/movies">Popular on DVD</a></li>
+        <li><a href="/coming">Coming soon</a></li>
         <li><a href="/contact">Contact</a></li>
       </ul>
     </header>
@@ -34,24 +34,24 @@
   <!-- ------------------------------->
   <script id="home" type="text/template">
     <div class="page home">
-      {{{tv_header}}}
-      <div class="home_containter">
-        <ul id="home_tv">
+      {{{theater_header}}}
+      <div class="containter">
+        <ul id="theater">
         </ul>
       </div>
-      {{{movie_header}}}
-      <div class="home_containter">
-        <ul id="home_movies">
+      {{{dvd_header}}}
+      <div class="containter">
+        <ul id="dvd">
         </ul>
       </div>
     </div>
     
   </script>
-  <script id="tv" type="text/template">
-    <div class="page tv">
+  <script id="theater" type="text/template">
+    <div class="page theater">
       {{{page_header}}}
       <div class="containter">
-        <ul id="tv">
+        <ul id="theater">
         </ul>
       </div>
     </div>
@@ -67,15 +67,27 @@
     </div>
     
   </script>
-  <script id="about" type="text/template">
-    <div class="page about">
-      {{{page_header}}}
+  <script id="coming" type="text/template">
+    <div class="page coming">
+      {{{theaters_header}}}
+      <div class="containter">
+        <ul id="theater">
+        </ul>
+      </div>
+      {{{dvd_header}}}
+      <div class="containter">
+        <ul id="dvd">
+        </ul>
+      </div>
     </div>
     
   </script>
   <script id="contact" type="text/template">
     <div class="page contact">
       {{{page_header}}}
+      <div class="containter">
+        <p>Where all things movies reside.</p>
+      </div>
     </div>
     
   </script>
