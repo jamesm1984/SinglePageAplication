@@ -309,14 +309,27 @@ a {
   background-color: rgba(44, 62, 80, 0.8);
   border-radius: 5px;
   padding: 20px; }
-/* line 309, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
-.contact a:hover {
-  font-weight: bold; }
+  /* line 309, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  .contact .containter a {
+    width: 100%;
+    text-align: right;
+    padding-bottom: 10px; }
+  /* line 314, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  .contact .containter a:hover {
+    font-weight: bold; }
+  /* line 317, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  .contact .containter #contact {
+    width: 302px;
+    padding: 5px;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 0 auto; }
 
-/* line 313, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+/* line 326, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .footer {
   padding: 10px; }
-  /* line 316, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 329, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .footer p {
     margin: 0;
     padding: 0;
