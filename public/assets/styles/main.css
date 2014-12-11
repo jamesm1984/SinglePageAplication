@@ -307,12 +307,16 @@ a {
   overflow-x: scroll;
   overflow-y: hidden;
   background-color: rgba(44, 62, 80, 0.8);
-  border-radius: 5px; }
-
+  border-radius: 5px;
+  padding: 20px; }
 /* line 309, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+.contact a:hover {
+  font-weight: bold; }
+
+/* line 313, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
 .footer {
   padding: 10px; }
-  /* line 312, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
+  /* line 316, /Users/artur/Desktop/SinglePageAplication/src/assets/styles/index.sass */
   .footer p {
     margin: 0;
     padding: 0;

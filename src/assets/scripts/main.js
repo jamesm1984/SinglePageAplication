@@ -372,7 +372,9 @@ jQuery(function($) {
 
       // Some page data
       this.model.set({
-        page_header: '<h1>Contact</h1>'
+        page_header: '<h1>Contact</h1>',
+        contact_name:'<p>James McGaghey</p>',
+        email:'jamesmcgaghey@gmail.com'
       });
 
     },
