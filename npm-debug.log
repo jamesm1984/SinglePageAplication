@@ -1,0 +1,219 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 warn package.json spa-boilerplate@0.0.0 No repository field.
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ '/Users/artur/Desktop/SinglePageAplication',
+6 verbose install   [ 'express',
+6 verbose install     'gulp',
+6 verbose install     'gulp-sass',
+6 verbose install     'gulp-imagemin',
+6 verbose install     'gulp-jade',
+6 verbose install     'gulp-rename' ] ]
+7 info preinstall spa-boilerplate@0.0.0
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'express@*', null ]
+10 verbose cache add name=undefined spec="express@*" args=["express@*",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'express@*',
+11 verbose parsed url   path: 'express@*',
+11 verbose parsed url   href: 'express@*' }
+12 verbose cache add [ 'gulp@*', null ]
+13 verbose cache add name=undefined spec="gulp@*" args=["gulp@*",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'gulp@*',
+14 verbose parsed url   path: 'gulp@*',
+14 verbose parsed url   href: 'gulp@*' }
+15 verbose cache add [ 'gulp-sass@*', null ]
+16 verbose cache add name=undefined spec="gulp-sass@*" args=["gulp-sass@*",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'gulp-sass@*',
+17 verbose parsed url   path: 'gulp-sass@*',
+17 verbose parsed url   href: 'gulp-sass@*' }
+18 verbose cache add [ 'gulp-imagemin@*', null ]
+19 verbose cache add name=undefined spec="gulp-imagemin@*" args=["gulp-imagemin@*",null]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: 'gulp-imagemin@*',
+20 verbose parsed url   path: 'gulp-imagemin@*',
+20 verbose parsed url   href: 'gulp-imagemin@*' }
+21 verbose cache add name="express" spec="*" args=["express","*"]
+22 verbose parsed url { protocol: null,
+22 verbose parsed url   slashes: null,
+22 verbose parsed url   auth: null,
+22 verbose parsed url   host: null,
+22 verbose parsed url   port: null,
+22 verbose parsed url   hostname: null,
+22 verbose parsed url   hash: null,
+22 verbose parsed url   search: null,
+22 verbose parsed url   query: null,
+22 verbose parsed url   pathname: '*',
+22 verbose parsed url   path: '*',
+22 verbose parsed url   href: '*' }
+23 verbose addNamed [ 'express', '*' ]
+24 verbose addNamed [ null, '*' ]
+25 verbose cache add name="gulp" spec="*" args=["gulp","*"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '*',
+26 verbose parsed url   path: '*',
+26 verbose parsed url   href: '*' }
+27 verbose addNamed [ 'gulp', '*' ]
+28 verbose addNamed [ null, '*' ]
+29 verbose cache add name="gulp-sass" spec="*" args=["gulp-sass","*"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '*',
+30 verbose parsed url   path: '*',
+30 verbose parsed url   href: '*' }
+31 verbose addNamed [ 'gulp-sass', '*' ]
+32 verbose addNamed [ null, '*' ]
+33 verbose cache add name="gulp-imagemin" spec="*" args=["gulp-imagemin","*"]
+34 verbose parsed url { protocol: null,
+34 verbose parsed url   slashes: null,
+34 verbose parsed url   auth: null,
+34 verbose parsed url   host: null,
+34 verbose parsed url   port: null,
+34 verbose parsed url   hostname: null,
+34 verbose parsed url   hash: null,
+34 verbose parsed url   search: null,
+34 verbose parsed url   query: null,
+34 verbose parsed url   pathname: '*',
+34 verbose parsed url   path: '*',
+34 verbose parsed url   href: '*' }
+35 verbose addNamed [ 'gulp-imagemin', '*' ]
+36 verbose addNamed [ null, '*' ]
+37 verbose cache add [ 'gulp-jade@*', null ]
+38 verbose cache add name=undefined spec="gulp-jade@*" args=["gulp-jade@*",null]
+39 verbose parsed url { protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: 'gulp-jade@*',
+39 verbose parsed url   path: 'gulp-jade@*',
+39 verbose parsed url   href: 'gulp-jade@*' }
+40 verbose cache add [ 'gulp-rename@*', null ]
+41 verbose cache add name=undefined spec="gulp-rename@*" args=["gulp-rename@*",null]
+42 verbose parsed url { protocol: null,
+42 verbose parsed url   slashes: null,
+42 verbose parsed url   auth: null,
+42 verbose parsed url   host: null,
+42 verbose parsed url   port: null,
+42 verbose parsed url   hostname: null,
+42 verbose parsed url   hash: null,
+42 verbose parsed url   search: null,
+42 verbose parsed url   query: null,
+42 verbose parsed url   pathname: 'gulp-rename@*',
+42 verbose parsed url   path: 'gulp-rename@*',
+42 verbose parsed url   href: 'gulp-rename@*' }
+43 silly lockFile 8ad1ad64-express express@*
+44 verbose lock express@* /Users/artur/.npm/8ad1ad64-express.lock
+45 silly lockFile 51046861-gulp gulp@*
+46 verbose lock gulp@* /Users/artur/.npm/51046861-gulp.lock
+47 silly lockFile 85a075d2-gulp-sass gulp-sass@*
+48 verbose lock gulp-sass@* /Users/artur/.npm/85a075d2-gulp-sass.lock
+49 silly lockFile de70c583-gulp-imagemin gulp-imagemin@*
+50 verbose lock gulp-imagemin@* /Users/artur/.npm/de70c583-gulp-imagemin.lock
+51 verbose cache add name="gulp-jade" spec="*" args=["gulp-jade","*"]
+52 verbose parsed url { protocol: null,
+52 verbose parsed url   slashes: null,
+52 verbose parsed url   auth: null,
+52 verbose parsed url   host: null,
+52 verbose parsed url   port: null,
+52 verbose parsed url   hostname: null,
+52 verbose parsed url   hash: null,
+52 verbose parsed url   search: null,
+52 verbose parsed url   query: null,
+52 verbose parsed url   pathname: '*',
+52 verbose parsed url   path: '*',
+52 verbose parsed url   href: '*' }
+53 verbose addNamed [ 'gulp-jade', '*' ]
+54 verbose addNamed [ null, '*' ]
+55 silly lockFile ce5aea89-gulp-jade gulp-jade@*
+56 verbose lock gulp-jade@* /Users/artur/.npm/ce5aea89-gulp-jade.lock
+57 verbose cache add name="gulp-rename" spec="*" args=["gulp-rename","*"]
+58 verbose parsed url { protocol: null,
+58 verbose parsed url   slashes: null,
+58 verbose parsed url   auth: null,
+58 verbose parsed url   host: null,
+58 verbose parsed url   port: null,
+58 verbose parsed url   hostname: null,
+58 verbose parsed url   hash: null,
+58 verbose parsed url   search: null,
+58 verbose parsed url   query: null,
+58 verbose parsed url   pathname: '*',
+58 verbose parsed url   path: '*',
+58 verbose parsed url   href: '*' }
+59 verbose addNamed [ 'gulp-rename', '*' ]
+60 verbose addNamed [ null, '*' ]
+61 silly lockFile 8c7d6c1b-gulp-rename gulp-rename@*
+62 verbose lock gulp-rename@* /Users/artur/.npm/8c7d6c1b-gulp-rename.lock
+63 silly lockFile de70c583-gulp-imagemin gulp-imagemin@*
+64 error Error: Attempt to unlock gulp-imagemin@*, which hasn't been locked
+64 error     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:44:11)
+64 error     at cb (/usr/local/lib/node_modules/npm/lib/cache/add-named.js:32:5)
+64 error     at /usr/local/lib/node_modules/npm/lib/cache/add-named.js:41:20
+64 error     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:30:7
+64 error     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+64 error     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+64 error     at Object.oncomplete (fs.js:107:15)
+65 error If you need help, you may report this *entire* log,
+65 error including the npm and node versions, at:
+65 error     <http://github.com/npm/npm/issues>
+66 error System Darwin 13.4.0
+67 error command "node" "/usr/local/bin/npm" "install"
+68 error cwd /Users/artur/Desktop/SinglePageAplication
+69 error node -v v0.10.32
+70 error npm -v 1.4.28
+71 verbose exit [ 1, true ]

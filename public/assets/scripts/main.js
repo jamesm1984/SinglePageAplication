@@ -8,9 +8,11 @@
 // Wait for DOM Load
 // -----------------------------
 
+
 jQuery(function($) {
-  var seasons_data = [];//tv = JSON.parse('http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/1/5/subscription/web');
-var id=[];
+var seasons_data = [];//tv = JSON.parse('http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/1/5/subscription/web');
+var id;
+var queryData;
   //movies = JSON.parse('http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/1/5/subscription/web');
 
   // -----------------------------
@@ -32,7 +34,7 @@ var id=[];
     home: function() {
       console.log('Navigating to Home Page');
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/1/5/subscription/web",
+      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/0/5/subscription/web",
         function( data ) {
           for (i=0; i < data['results'].length; i++){
             var id = data['results'][i].id;
@@ -42,7 +44,7 @@ var id=[];
         }
       );
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/1/5/subscription/web",
+      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/0/5/subscription/web",
         function( data ) {
           for (i=0; i < data['results'].length; i++){
             var id = data['results'][i].id;
@@ -61,7 +63,7 @@ var id=[];
 
       console.log('Navigating to tv Page');
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/1/27/subscription/web",
+      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/shows/all/0/27/subscription/web",
         function( data ) {
           for (i=0; i < 27; i++){
             id.push(data['results'][i].id)
@@ -76,21 +78,97 @@ var id=[];
 
     // Movies Route
     movies: function() {
-      var id=[];
+      // var id=[];
+      // var loopNumber;
+      // var poster =[];
+
       // {Base API URL} /movie/ {id}
       console.log('Navigating to movies Page');
 
-      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/1/27/subscription/web",
-        function( data ) {
+      // $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/movie/all/0/27/purchase/web",
 
-          for (i=0; i < data['results'].length; i++){
+      //   function( data ) {
 
-            id.push(data['results'][i].id);
-            var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].release_year+"</p><img src="+data['results'][i].poster_240x342+"></li>";
-            $('#movies').append(html);
-          }
-        }
-      );
+      //     // function loadRottenData(id, poster){
+
+      //     //   $.ajax({
+      //     //     url: "http://api.rottentomatoes.com/api/public/v1.0/movies/"+id+".json?apikey=btgk4cag7u4vnv52szrrbms5",
+      //     //     dataType: "jsonp",
+      //     //     success: function(RottenData){
+      //     //       console.log(RottenData);
+      //     //       console.log(poster)
+
+      //     //       if ( RottenData.synopsis != ''){
+      //     //         var html =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img src="+poster+"><h2>Synopsis</h2><p>"+RottenData.synopsis+"</p></li>"
+      //     //       } else {
+      //     //         var html =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img src="+poster+"></li>"
+      //     //       }
+
+      //     //       $('#movies').append(html);
+      //     //     }
+      //     //   });
+
+      //     // }
+      //     for (i=0; i < 27; i++){
+      //       poster.push(data['results'][i].poster_240x342);
+
+      //     }
+      //     for (i=0; i < 27; i++){
+      //       loopNumber = i;
+      //       // queryData = data;
+      //       // var html="<li><h2>"+data['results'][i].title+"</h2><p>Released: "+data['results'][i].release_year+"</p><img src="+data['results'][i].poster_240x342+"></li>";
+      //       // $('#movies').append(html);
+      //       var posterId = "posterId-"+i;
+
+      //       $.ajax({
+      //         url: "http://api.rottentomatoes.com/api/public/v1.0/movies/"+data['results'][i].rottentomatoes+".json?apikey=btgk4cag7u4vnv52szrrbms5",
+      //         dataType: "jsonp",
+      //         success: function(RottenData){
+      //           // console.log(RottenData);
+      //           // console.log(poster);
+      //           var html1 =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img id='"+posterId+"'></li>";
+      //           var html2 =  "<li><h2>"+RottenData.title+"</h2><p>Released: "+RottenData.year+"</p><p>Studio: "+RottenData.studio+"</p><p>Rating: "+RottenData.mpaa_rating+"</p><img id='"+posterId+"'><h2>Synopsis</h2><p>"+RottenData.synopsis+"</p></li>";
+
+      //           if ( RottenData.synopsis != ''){
+      //             var html = html1;
+      //           } else {
+      //             var html = html2;
+      //           }
+
+      //           $('#movies').append(html);
+      //         }
+      //       });
+
+      //       // loadRottenData(data['results'][i].rottentomatoes, data['results'][i].poster_240x342);
+
+      //     }
+
+          //  working - poster sucks
+          $.ajax({
+              url: "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=btgk4cag7u4vnv52szrrbms5&limit=27&country=ca",
+              dataType: "jsonp",
+              success: function(RottenData){
+                console.log(RottenData.movies);
+                for (i=0; i < 27; i++){
+                  var data= RottenData.movies[i];
+                  // console.log(RottenData);
+
+                  if ( data.synopsis != ''){data
+                    var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div><h2>Synopsis</h2><p>"+data.synopsis+"</p></li>"
+                  } else {
+                    var html =  "<li><h2>"+data.title+"</h2><img src="+data.posters.original+"><div><p>Released: "+data.year+"</p><p>Rating: "+data.mpaa_rating+"</p></div></li>"
+                  }
+
+                  $('#movies').append(html);
+                };
+
+
+              }
+            });
+
+
+      //   }
+      // );
 
       App.views['movies'].render();
     },
@@ -98,6 +176,25 @@ var id=[];
     // About Route
     about: function() {
       console.log('Navigating to About Page');
+      var time;
+
+      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/updates/get_current_time",
+        function( data ) {
+          console.log(data['results'])
+          // time = data.results
+          $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/updates/movies/changes/"+data['results'],
+            function( newData ) {
+              console.log(newData)
+            }
+          )
+        }
+      );
+
+      $.getJSON( "http://api-public.guidebox.com/v1.43/json/rKIqHMV5Eer12k3q5nPp0de9xX6wNcaW/sources/subscription",
+        function( data ) {
+          console.log(data)
+        }
+      );
 
       App.views['about'].render();
     },
