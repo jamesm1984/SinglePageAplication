@@ -1,16 +1,16 @@
-# James McGaghey's Chat
+# James McGaghey's movie finder
 
 ## Installation
 
 - Run Terminal
-- Navigate to /James_McGaghey-Assignment_3 (using ls and cd)
+- root folder (using ls and cd)
 - Run `sudo npm install`
 - Run `gulp` to build html and css public files
 
 ## Run Server
 
 - Run Terminal
-- Navigate to /James_McGaghey-Assignment_3 (using ls and cd)
+- root folder (using ls and cd)
 - Run `node server.js` to begin running server on **127.0.0.1:3000**
 
 ## Libraries/Technologies
