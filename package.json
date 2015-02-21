@@ -2,8 +2,8 @@
   "name": "spa-boilerplate",
   "description": "Single Page Application Boilerplate Project",
   "version": "0.0.0",
-  "homepage": "http://darcyclarke.me",
-  "author": "Darcy Clarke",
+  "homepage": "http://www.jamesmcgaghey.com",
+  "author": "James McGaghey",
   "main": "server.js",
   "dependencies": {
     "express": "*"
